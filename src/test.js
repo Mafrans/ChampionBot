@@ -1,7 +1,7 @@
 const assert = require('assert');
 const {Champion, Stats} = require('./champions');
 const {Gear} = require('./gear.ts');
-const {Classes, Skills} = require('./classes.ts');
+const {Classes, Skills} = require('./classes');
 
 describe('Champions', () => {
     it('should exist', () => {
