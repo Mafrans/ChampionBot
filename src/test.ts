@@ -1,12 +1,12 @@
 const Assert = require('assert');
-import {Champions, Champion, Stats} from './champions';
+import {Champion, Stats} from './champions';
 import {Gear} from './gear';
 import {Classes, Skills} from './classes';
 
 describe('Champions', () => {
     it('should exist', () => {
-        Assert.not.equal(Champions, null);
-        Assert.not.equal(Champions, undefined);
+        Assert.not.equal(Champion, null);
+        Assert.not.equal(Champion, undefined);
     });
 
     it('should be instantiateable', () => {
@@ -85,8 +85,9 @@ describe('Champions', () => {
 
     describe('Gear', () => {
         it('should exist', () => {
-            Assert.equal(Champions.gear, null);
-            Assert.equal(Champions.gear, undefined);
+            const champ = new Champion();
+            Assert.equal(champ.gear, null);
+            Assert.equal(champ.gear, undefined);
         });
 
         it('should be settable', () => {
@@ -113,8 +114,9 @@ describe('Champions', () => {
 
     describe('Skills', () => {
         it('should exist', () => {
-            Assert.equal(Champions.skills, null);
-            Assert.equal(Champions.skills, undefined);
+            const champ = new Champion();
+            Assert.equal(champ.skills, null);
+            Assert.equal(champ.skills, undefined);
         });
 
         it('should be settable', () => {
