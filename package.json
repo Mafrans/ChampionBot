@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "tsc --build && mocha src/test.js --reporter=nyan"
+    "build": "tsc --build",
+    "test": "npm run build && mocha src/test.js --reporter=nyan"
   },
   "keywords": [],
   "author": "",
