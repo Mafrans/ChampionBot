@@ -1,5 +1,6 @@
 class Champion {
     name: string = "";
+    surname: string = "";
     constructor() {
     }
 }
