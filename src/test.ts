@@ -1,7 +1,7 @@
 const Assert = require('assert');
-import {Champions, Champion, Stats} from './champions.ts';
-import {Gear} from './gear.ts';
-import {Classes, Skills} from './classes.ts';
+import {Champions, Champion, Stats} from './champions';
+import {Gear} from './gear';
+import {Classes, Skills} from './classes';
 
 describe('Champions', () => {
     it('should exist', () => {
