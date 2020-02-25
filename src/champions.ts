@@ -1,7 +1,10 @@
-class Champion {}
+class Champion {
+    constructor() {
+    }
+}
 const Stats = {};
 
-exports = {
+module.exports = {
     Champion,
     Stats,
 };

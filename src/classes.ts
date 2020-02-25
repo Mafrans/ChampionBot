@@ -1,7 +1,7 @@
 class Classes {}
 class Skills {}
 
-exports = {
+module.exports = {
     Classes,
     Skills,
 }

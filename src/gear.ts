@@ -1,5 +1,5 @@
 class Gear {}
 
-exports = {
+module.exports = {
     Gear,
 };
