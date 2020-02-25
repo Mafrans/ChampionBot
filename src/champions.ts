@@ -1,2 +1,7 @@
-export class Champion {}
-export const Stats = {};
+class Champion {}
+const Stats = {};
+
+exports = {
+    Champion,
+    Stats,
+};

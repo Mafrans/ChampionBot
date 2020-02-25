@@ -1,2 +1,7 @@
-export class Classes {}
-export class Skills {}
+class Classes {}
+class Skills {}
+
+exports = {
+    Classes,
+    Skills,
+}

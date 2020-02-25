@@ -1,1 +1,5 @@
-export class Gear {}
+class Gear {}
+
+exports = {
+    Gear,
+};
