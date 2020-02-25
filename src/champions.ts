@@ -1,5 +1,5 @@
 class Champion {
-    name: string;
+    name: string = "";
     constructor() {
     }
 }
