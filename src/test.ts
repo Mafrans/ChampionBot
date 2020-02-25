@@ -1,106 +1,107 @@
-const Assert = require('assert');
-import {Champion, Stats} from './champions';
-import {Gear} from './gear';
-import {Classes, Skills} from './classes';
+const assert = require('assert');
+const {Champion, Stats} = require('./champions.ts');
+const {Gear} = require('./gear.ts');
+const {Classes, Skills} = require('./classes.ts');
 
 describe('Champions', () => {
     it('should exist', () => {
-        Assert.not.equal(Champion, null);
-        Assert.not.equal(Champion, undefined);
+        assert(Champion !== null);
+        assert(Champion !== undefined);
     });
 
     it('should be instantiateable', () => {
-        Assert.not.equal(new Champion(), null);
+        assert(new Champion() !== null);
     });
 
     it('should have name', () => {
         const champ = new Champion();
-        Assert.not.equal(champ.name, null);
-        Assert.not.equal(champ.name, undefined);
+        assert(champ.name !== null);
+        assert(champ.name !== undefined);
     });
 
     it('should have surname', () => {
         const champ = new Champion();
-        Assert.not.equal(champ.surname, null);
-        Assert.not.equal(champ.surname, undefined);
+        assert(champ.surname !== null);
+        assert(champ.surname !== undefined);
     });
 
     it('should have class', () => {
         const champ = new Champion();
-        Assert.not.equal(champ.class, null);
-        Assert.not.equal(champ.class, undefined);
+        assert(champ.class !== null);
+        assert(champ.class !== undefined);
     });
 
     it('should have race', () => {
         const champ = new Champion();
-        Assert.not.equal(champ.race, null);
-        Assert.not.equal(champ.race, undefined);
+        assert(champ.race !== null);
+        assert(champ.race !== undefined);
     });
 
     it('should have level', () => {
         const champ = new Champion();
-        Assert.not.equal(champ.level, null);
-        Assert.not.equal(champ.level, undefined);
+        assert(champ.level !== null);
+        assert(champ.level !== undefined);
     });
 
     describe('Stats', () => {
         it('should exist', () => {
             const champ = new Champion();
-            Assert.not.equal(champ.stats, null);
-            Assert.not.equal(champ.stats, undefined);
+            assert(champ.stats !== null);
+            assert(champ.stats !== undefined);
         });
 
         it('should be gettable', () => {
             const champ = new Champion();
-            Assert.equal(champ.stats[Stats.DAMAGE], 0);
+            assert(champ.stats[Stats.DAMAGE] !== null);
+            assert(champ.stats[Stats.DAMAGE] !== undefined);
         });
 
         it('should be settable', () => {
             const champ = new Champion();
             champ.setStat(Stats.DAMAGE, 1);
-            Assert.equal(champ.stats[Stats.DAMAGE], 1);
+            assert(champ.stats[Stats.DAMAGE] === 1);
         });
 
         it('should be modifiable', () => {
             const champ = new Champion();
             champ.setStat(Stats.DAMAGE, 1);
             champ.modifyStat(Stats.DAMAGE, 1);
-            Assert.equal(champ.stats[Stats.DAMAGE], 2);
+            assert(champ.stats[Stats.DAMAGE] === 2);
         });
 
         it('should be addable', () => {
             const champ = new Champion();
             champ.setStat(Stats.DAMAGE, 1);
             champ.addStat(Stats.DAMAGE, 1);
-            Assert.equal(champ.stats[Stats.DAMAGE], 2);
+            assert(champ.stats[Stats.DAMAGE] === 2);
         });
 
         it('should be removable', () => {
             const champ = new Champion();
             champ.setStat(Stats.DAMAGE, 1);
             champ.removeStat(Stats.DAMAGE, 1);
-            Assert.equal(champ.stats[Stats.DAMAGE], 0);
+            assert(champ.stats[Stats.DAMAGE] === 0);
         });
     });
 
     describe('Gear', () => {
         it('should exist', () => {
             const champ = new Champion();
-            Assert.equal(champ.gear, null);
-            Assert.equal(champ.gear, undefined);
+            assert(champ.gear !== null);
+            assert(champ.gear !== undefined);
         });
 
         it('should be settable', () => {
             const champ = new Champion();
             champ.setGear([]);
-            Assert.equal(champ.gear, []);
+            assert(champ.gear === []);
         });
 
         it('should be addable', () => {
             const champ = new Champion();
             champ.setGear([]);
             champ.addGear({id: 'a'});
-            Assert.equal(champ.gear.length, 1);
+            assert(champ.gear.length === 1);
         });
 
         it('should be removable', () => {
@@ -108,28 +109,28 @@ describe('Champions', () => {
             champ.setGear([]);
             champ.addGear({id: 'a'});
             champ.removeGear('a');
-            Assert.equal(champ.gear.length, 0);
+            assert(champ.gear.length === 0);
         });
     });
 
     describe('Skills', () => {
         it('should exist', () => {
             const champ = new Champion();
-            Assert.equal(champ.skills, null);
-            Assert.equal(champ.skills, undefined);
+            assert(champ.skills === null);
+            assert(champ.skills === undefined);
         });
 
         it('should be settable', () => {
             const champ = new Champion();
             champ.setSkills([]);
-            Assert.equal(champ.skills, []);
+            assert(champ.skills === []);
         });
 
         it('should be addable', () => {
             const champ = new Champion();
             champ.setSkills([]);
             champ.addSkill({id: 'a'});
-            Assert.equal(champ.skills.length, 1);
+            assert(champ.skills.length === 1);
         });
 
         it('should be removable', () => {
@@ -137,103 +138,104 @@ describe('Champions', () => {
             champ.setSkills([]);
             champ.addSkill({id: 'a'});
             champ.removeSkill('a');
-            Assert.equal(champ.skills.length, 0);
+            assert(champ.skills.length === 0);
         });
     });
 });
 
 describe('Gear', () => {
     it('should exist', () => {
-        Assert.not.equal(Gear, null);
-        Assert.not.equal(Gear, undefined);
+        assert(Gear !== null);
+        assert(Gear !== undefined);
     });
 
     it('should be instantiateable', () => {
-        Assert.not.equal(new Gear(), null);
+        assert(new Gear() !== null);
     });
 
     it('should have name', () => {
         const gear = new Gear();
-        Assert.not.equal(gear.name, null);
-        Assert.not.equal(gear.name, undefined);
+        assert(gear.name !== null);
+        assert(gear.name !== undefined);
     });
 
     it('should have rarity', () => {
         const gear = new Gear();
-        Assert.not.equal(gear.rarity, null);
-        Assert.not.equal(gear.rarity, undefined);
+        assert(gear.rarity !== null);
+        assert(gear.rarity !== undefined);
     });
 
     it('should have type', () => {
         const gear = new Gear();
-        Assert.not.equal(gear.type, null);
-        Assert.not.equal(gear.type, undefined);
+        assert(gear.type !== null);
+        assert(gear.type !== undefined);
     });
 
     it('should have level', () => {
         const champ = new Champion();
-        Assert.not.equal(champ.level, null);
-        Assert.not.equal(champ.level, undefined);
+        assert(champ.level !== null);
+        assert(champ.level !== undefined);
     });
 
     describe('Stats', () => {
         it('should exist', () => {
             const gear = new Gear();
-            Assert.not.equal(gear.stats, null);
-            Assert.not.equal(gear.stats, undefined);
+            assert(gear.stats !== null);
+            assert(gear.stats !== undefined);
         });
 
         it('should be gettable', () => {
             const gear = new Gear();
-            Assert.equal(gear.stats[Stats.DAMAGE], 0);
+            assert(gear.stats[Stats.DAMAGE] !== null);
+            assert(gear.stats[Stats.DAMAGE] !== undefined);
         });
 
         it('should be settable', () => {
             const gear = new Gear();
             gear.setStat(Stats.DAMAGE, 1);
-            Assert.equal(gear.stats[Stats.DAMAGE], 1);
+            assert(gear.stats[Stats.DAMAGE] === 1);
         });
 
         it('should be modifiable', () => {
             const gear = new Gear();
             gear.setStat(Stats.DAMAGE, 1);
             gear.modifyStat(Stats.DAMAGE, 1);
-            Assert.equal(gear.stats[Stats.DAMAGE], 2);
+            assert(gear.stats[Stats.DAMAGE] === 2);
         });
 
         it('should be addable', () => {
             const gear = new Gear();
             gear.setStat(Stats.DAMAGE, 1);
             gear.addStat(Stats.DAMAGE, 1);
-            Assert.equal(gear.stats[Stats.DAMAGE], 2);
+            assert(gear.stats[Stats.DAMAGE] === 2);
         });
 
         it('should be removable', () => {
             const gear = new Gear();
             gear.setStat(Stats.DAMAGE, 1);
             gear.removeStat(Stats.DAMAGE, 1);
-            Assert.equal(gear.stats[Stats.DAMAGE], 0);
+            assert(gear.stats[Stats.DAMAGE] === 0);
         });
     });
 
     describe('Skills', () => {
         it('should exist', () => {
             const gear = new Gear();
-            Assert.equal(gear.skills, null);
-            Assert.equal(gear.skills, undefined);
+            assert(gear.skills !== null);
+            assert(gear.skills !== undefined);
         });
 
         it('should be settable', () => {
             const gear = new Gear();
             gear.setSkills([]);
-            Assert.equal(gear.skills, []);
+            assert(gear.skills === []);
         });
 
         it('should be addable', () => {
             const gear = new Gear();
             gear.setSkills([]);
             gear.addSkill({id: 'a'});
-            Assert.equal(gear.skills.length, 1);
+            assert(gear.skills.length === 1);
         });
 
         it('should be removable', () => {
@@ -241,28 +243,28 @@ describe('Gear', () => {
             gear.setSkills([]);
             gear.addSkill({id: 'a'});
             gear.removeSkill('a');
-            Assert.equal(gear.skills.length, 0);
+            assert(gear.skills.length === 0);
         });
     });
 
     describe('Status Effects', () => {
         it('should exist', () => {
             const gear = new Gear();
-            Assert.equal(gear.effects, null);
-            Assert.equal(gear.effects, undefined);
+            assert(gear.effects !== null);
+            assert(gear.effects !== undefined);
         });
 
         it('should be settable', () => {
             const gear = new Gear();
             gear.setEffects([]);
-            Assert.equal(gear.effects, []);
+            assert(gear.effects === []);
         });
 
         it('should be addable', () => {
             const gear = new Gear();
             gear.setEffects([]);
             gear.addEffect({id: 'a'});
-            Assert.equal(gear.effects.length, 1);
+            assert(gear.effects.length === 1);
         });
 
         it('should be removable', () => {
@@ -270,77 +272,77 @@ describe('Gear', () => {
             gear.setEffects([]);
             gear.addEffect({id: 'a'});
             gear.removeEffect('a');
-            Assert.equal(gear.effects.length, 0);
+            assert(gear.effects.length === 0);
         });
     });
 });
 
 describe('Classes', () => {
     it('should exist', () => {
-        Assert.not.equal(Classes, null);
-        Assert.not.equal(Classes, undefined);
+        assert(Classes !== null);
+        assert(Classes !== undefined);
     });
 
     it('should have name', () => {
-        Assert.not.equal(Classes['warrior'].name, null);
-        Assert.not.equal(Classes['warrior'].name, undefined);
+        assert(Classes['warrior'].name !== null);
+        assert(Classes['warrior'].name !== undefined);
     });
 
     it('should have titles', () => {
-        Assert.not.equal(Classes['warrior'].titles, null);
-        Assert.not.equal(Classes['warrior'].titles, undefined);
+        assert(Classes['warrior'].titles !== null);
+        assert(Classes['warrior'].titles !== undefined);
     });
 
     describe('Stats', () => {
         it('should exist', () => {
-            Assert.not.equal(Classes['warrior'].stats, null);
-            Assert.not.equal(Classes['warrior'].stats, undefined);
+            assert(Classes['warrior'].stats !== null);
+            assert(Classes['warrior'].stats !== undefined);
         });
 
         it('should be gettable', () => {
-            Assert.not.equal(Classes['warrior'].stats[Stats.DAMAGE], null);
-            Assert.not.equal(Classes['warrior'].stats[Stats.DAMAGE], undefined);
+            assert(Classes['warrior'].stats[Stats.DAMAGE] !== null);
+            assert(Classes['warrior'].stats[Stats.DAMAGE] !== undefined);
         });
     });
 
     describe('Skills', () => {
         it('should exist', () => {
-            Assert.equal(Classes['warrior'].skills, null);
-            Assert.equal(Classes['warrior'].skills, undefined);
+            assert(Classes['warrior'].skills !== null);
+            assert(Classes['warrior'].skills !== undefined);
         });
     });
 
     describe('Custom Effects', () => {
         it('should exist', () => {
-            Assert.equal(Classes['warrior'].effects, null);
-            Assert.equal(Classes['warrior'].effects, undefined);
+            assert(Classes['warrior'].effects !== null);
+            assert(Classes['warrior'].effects !== undefined);
         });
     });
 });
 
 describe('Skills', () => {
     it('should exist', () => {
-        Assert.not.equal(Skills, null);
-        Assert.not.equal(Skills, undefined);
+        assert(Skills !== null);
+        assert(Skills !== undefined);
     });
 
     it('should have name', () => {
-        Assert.not.equal(Skills['warrior'][0].name, null);
-        Assert.not.equal(Skills['warrior'][0].name, undefined);
+        assert(Skills['warrior'][0].name !== null);
+        assert(Skills['warrior'][0].name !== undefined);
     });
 
     it('should have rarity', () => {
-        Assert.not.equal(Skills['warrior'][0].rarity, null);
-        Assert.not.equal(Skills['warrior'][0].rarity, undefined);
+        assert(Skills['warrior'][0].rarity !== null);
+        assert(Skills['warrior'][0].rarity !== undefined);
     });
 
     it('should have description', () => {
-        Assert.not.equal(Skills['warrior'][0].description, null);
-        Assert.not.equal(Skills['warrior'][0].description, undefined);
+        assert(Skills['warrior'][0].description !== null);
+        assert(Skills['warrior'][0].description !== undefined);
     });
 
     it('should have effects', () => {
-        Assert.not.equal(Skills['warrior'][0].effects, null);
-        Assert.not.equal(Skills['warrior'][0].effects, undefined);
+        assert(Skills['warrior'][0].effects !== null);
+        assert(Skills['warrior'][0].effects !== undefined);
     });
 });
