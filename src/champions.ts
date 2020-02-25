@@ -1,9 +1,9 @@
-const { Class } = require('./classes');
+import { Classes } from './classes';
 
 class Champion {
     name: string = "";
     surname: string = "";
-    class: object = Class.WARRIOR;
+    class: object = Classes.WARRIOR;
     constructor() {
     }
 }

@@ -1,7 +1,9 @@
-class Classes {}
+export const Classes = {
+    WARRIOR: {}
+};
 class Skills {}
 
-module.exports = {
+/*module.exports = {
     Classes,
     Skills,
-}
+}*/
