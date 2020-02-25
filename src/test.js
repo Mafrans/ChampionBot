@@ -284,38 +284,38 @@ describe('Classes', () => {
     });
 
     it('should have name', () => {
-        assert(Classes['warrior'].name !== null);
-        assert(Classes['warrior'].name !== undefined);
+        assert(Classes.WARRIOR.name !== null);
+        assert(Classes.WARRIOR.name !== undefined);
     });
 
     it('should have titles', () => {
-        assert(Classes['warrior'].titles !== null);
-        assert(Classes['warrior'].titles !== undefined);
+        assert(Classes.WARRIOR.titles !== null);
+        assert(Classes.WARRIOR.titles !== undefined);
     });
 
     describe('Stats', () => {
         it('should exist', () => {
-            assert(Classes['warrior'].stats !== null);
-            assert(Classes['warrior'].stats !== undefined);
+            assert(Classes.WARRIOR.stats !== null);
+            assert(Classes.WARRIOR.stats !== undefined);
         });
 
         it('should be gettable', () => {
-            assert(Classes['warrior'].stats[Stats.DAMAGE] !== null);
-            assert(Classes['warrior'].stats[Stats.DAMAGE] !== undefined);
+            assert(Classes.WARRIOR.stats[Stats.DAMAGE] !== null);
+            assert(Classes.WARRIOR.stats[Stats.DAMAGE] !== undefined);
         });
     });
 
     describe('Skills', () => {
         it('should exist', () => {
-            assert(Classes['warrior'].skills !== null);
-            assert(Classes['warrior'].skills !== undefined);
+            assert(Classes.WARRIOR.skills !== null);
+            assert(Classes.WARRIOR.skills !== undefined);
         });
     });
 
     describe('Custom Effects', () => {
         it('should exist', () => {
-            assert(Classes['warrior'].effects !== null);
-            assert(Classes['warrior'].effects !== undefined);
+            assert(Classes.WARRIOR.effects !== null);
+            assert(Classes.WARRIOR.effects !== undefined);
         });
     });
 });
