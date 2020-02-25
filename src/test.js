@@ -9,7 +9,7 @@ describe('Champions', () => {
         assert(Champion !== undefined);
     });
 
-    it('should be instantiateable', () => {
+    it('should be instantiable', () => {
         assert(new Champion() !== null);
     });
 
