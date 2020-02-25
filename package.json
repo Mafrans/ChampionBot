@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "mocha ./src/test.ts --reporter=nyan"
+    "test": "tsc --build && mocha src/test.js --reporter=nyan"
   },
   "keywords": [],
   "author": "",
