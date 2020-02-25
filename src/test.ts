@@ -1,5 +1,5 @@
 const assert = require('assert');
-const {Champion, Stats} = require('./champions.ts');
+const {Champion, Stats} = require('./champions');
 const {Gear} = require('./gear.ts');
 const {Classes, Skills} = require('./classes.ts');
 
