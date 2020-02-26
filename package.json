@@ -11,12 +11,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "mocha": "^7.0.1",
     "mocha-loader": "^4.0.1",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "@types/mocha": "^7.0.1",
-    "mocha": "^7.0.1"
+    "@types/node": "^13.7.6"
   }
 }
